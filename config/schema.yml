@@ -1,5 +1,4 @@
 propel:
-  _attributes:
   conference:
     _attributes: { phpName: Conference }
     id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
