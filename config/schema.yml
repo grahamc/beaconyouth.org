@@ -1,0 +1,13 @@
+propel:
+  _attributes:
+  conference:
+    _attributes: { phpName: Conference }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    name: {type: VARCHAR, size: '255', required: true }
+    type: {type: VARCHAR, size: '255', required: true }
+    location: {type: VARCHAR, size: '255', required: true }
+    start_date: { type: TIMESTAMP, required: false }
+    form_filename: {type: VARCHAR, size: '255', required: true }
+    _propel_behaviors:
+      timestampable: ~
+      soft_delete: ~
