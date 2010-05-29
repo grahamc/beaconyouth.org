@@ -18,6 +18,14 @@ class ConferenceForm extends BaseConferenceForm
 
 	  $this->setWidget('form_filename', new sfWidgetFormInputFile());
 
+	  $this->getWidget('form_filename')->setLabel('file');
+
+	  $this->validatorSchema['form_filename'] = new sfValidatorFile(array(
+		  'required'   => true,
+		  'path'       => sfConfig::get('sf_upload_dir').'/forms',
+		  'mime_types' => array('application/pdf'),
+));
+
 	  unset($this['created_at']);
 	  unset($this['updated_at']);
 	  unset($this['deleted_at']);

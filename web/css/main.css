@@ -1,3 +1,71 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td { margin: 0; padding: 0; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+fieldset, img, abbr, acronym { border: 0; }
+
+address, caption, cite, code, dfn, th, var { font-style: normal; font-weight: normal; }
+
+ol, ul { list-style: none; }
+
+caption, th, td { text-align: left; }
+
+h1, h2, h3, h4, h5, h6 { font-size: 1em; font-weight: normal; }
+
+select, option, input, textarea { font-size: inherit; font-family: inherit; }
+
+a, a:link, a:visited, a:active, a:focus { outline: none !important; }
+
+body { font-size: 62.5%; line-height: 1; } /* line-height is a temporary trial */
+
+
+h1 {
+	font-size: 60px;
+	font-weight: 550;
+}
+
+.header {
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: -30px;
+	margin-top: 15px;
+}
+
+body {
+	background-color: #bbeeff;
+	background-color: #eeffff;
+	width: 100%;
+	font-family: Helvetica;
+}
+
+img {
+	border: none;
+}
+
+h2 {
+	font-size: 35px;
+	font-weight: bolder;
+}
+
+p {
+	font-family: serif;
+	font-size: 16px;
+}
+
+.calendar p {
+	font-family: helvetica;
+}
+
+.container {
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	background-color: #fbf8f8;
+	
+}
+
 .calendar {
 	background-image: url(/images/calendar_blue.png);
 	height: 83px;
@@ -5,6 +73,8 @@
 	font-family: Helvetica;
 	font-weight: bold;
 	text-align: center;
+	margin-top: 15px;
+	margin-left: 10px;
 }
 
 .calendar .month {
@@ -14,8 +84,7 @@
 }
 
 .calendar .date {
-	margin-top: -17px;
-	padding-top: 0px;
+	padding-top: 6px;
 	font-size: 60px;
 }
 
@@ -23,30 +92,44 @@
 
 .conference_surround {
 	width: 600px;
-	height: 100px;
-	border-top: thin black solid;
+	height: 110px;
+	padding: 5px 5px; 5px 5px;
 	border-bottom: thin black solid;
 }
 
 .conference_date {
 	width: 100px;
 	float: left;
-	display: inline;
+	position:absolute;
 	margin-top: -7px;
 }
 
 .conference_description {
-	width: 200px;
-	display: inline;
+	float: left;
+	margin-left: 110px;
+	width: 390px;
+	position: absolute;
+}
+
+.conference_description h1, .conference_description p {
+	width: 400px;
 }
 
 .conference_download {
-	float: right;
+	float: left;
+	margin-left: 500px;
 	width: 100px;
-	display: inline;
-	margin-top: -92px;
+	position: absolute;
 }
 
 .conference_bottom {
 	clear: both;
 }
+
+
+
+
+
+
+
+

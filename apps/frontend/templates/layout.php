@@ -9,6 +9,14 @@
     <?php include_javascripts() ?>
   </head>
   <body>
-    <?php echo $sf_content ?>
+	  <div class="header">
+		  <h1>Beacon</h1>
+	  </div>
+	  <div class="container">
+		<?php echo $sf_content ?>
+	  </div>
+	  <div class="footer">
+		  <?php echo link_to('About', '@about_beacon'); ?> | <?php echo link_to('What\'s a Conference?', '@whats_a_conference'); ?>
+	  </div>
   </body>
 </html>

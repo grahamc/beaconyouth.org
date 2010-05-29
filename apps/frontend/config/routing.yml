@@ -6,6 +6,14 @@ homepage:
   url:   /
   param: { module: default, action: index }
 
+about_conferences:
+  url:	/about/conferences
+  param: { module: about, action: conferences }
+
+about_beacon:
+  url: /about/beacon
+  param: { module: about, action: beacon }
+
 # generic rules
 # please, remove them by adding more specific rules
 default_index:
