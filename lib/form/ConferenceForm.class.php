@@ -16,6 +16,11 @@ class ConferenceForm extends BaseConferenceForm
 	  $this->setDefault('type', 'all-age');
 	  $this->setDefault('start_date', time());
 
+	  $this->setWidget('form_filename', new sfWidgetFormInputFile());
+
+	  unset($this['created_at']);
+	  unset($this['updated_at']);
+	  unset($this['deleted_at']);
   }
 
   /**
