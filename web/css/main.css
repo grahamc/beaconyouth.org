@@ -114,6 +114,7 @@ td {
 	padding-top: 10px;
 	padding-left: 20px;
 	padding-bottom: 20px;
+	padding-right: 20px;
 	background-color: #ffffee;
 	
 }
@@ -130,7 +131,7 @@ td {
 }
 
 .calendar .month {
-	margin: 0px 0px 0px 0px;
+	margin: 0px 0px 0px -10px;
 	padding: 0px 0px 0px 0px;
 	font-size: 15px;
 	color: white;

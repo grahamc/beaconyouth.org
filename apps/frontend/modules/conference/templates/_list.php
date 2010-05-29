@@ -10,6 +10,8 @@
 	</div>
 	<div class="conference_download">
 		<a href="/uploads/forms/<?php echo $conference->getFormFilename(); ?>" target="_blank"><img src="/images/icons/Download.png" alt="Download" /></a>
+		<br />
+		<span class="smalltext" style="margin-left: 20px"><a href="/uploads/forms/<?php echo $conference->getFormFilename(); ?>" target="_blank">Download</a></span>
 	</div>
 </div>
 <?php else: ?>
