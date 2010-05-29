@@ -24,4 +24,8 @@ class defaultActions extends sfActions {
     public function executeModule(sfWebRequest $request) {
         // Heh.
     }
+
+	public function executeError404(sfWebRequest $request) {
+		// :)
+	}
 }
