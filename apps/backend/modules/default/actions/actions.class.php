@@ -17,7 +17,8 @@ class defaultActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
-
+	  $form = new ConferenceForm();
+	  $this->form = $form;
   }
 
   public function executeModule(sfWebRequest $request) {
