@@ -16,7 +16,7 @@ CREATE TABLE `conference`
 	`name` VARCHAR(255)  NOT NULL,
 	`type` VARCHAR(255)  NOT NULL,
 	`location` VARCHAR(255)  NOT NULL,
-	`start_date` DATETIME,
+	`start_date` DATE,
 	`form_filename` VARCHAR(255)  NOT NULL,
 	`created_at` DATETIME,
 	`updated_at` DATETIME,
