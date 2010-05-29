@@ -18,7 +18,6 @@ class defaultActions extends sfActions {
 		$c = new Criteria;
 		$c->add(ConferencePeer::DELETED_AT, null, Criteria::ISNULL);
 		$c->addAscendingOrderByColumn(ConferencePeer::START_DATE);
-		$c->add(ConferencePeer::START_DATE, ConferencePeer::START_DATE . ' > DATE_ADD(NOW(), INTERVAL 2 DAY)', Criteria::CUSTOM);
 		$this->forms = ConferencePeer::doSelect($c);
     }
 
