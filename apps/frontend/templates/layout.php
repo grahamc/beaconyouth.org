@@ -16,7 +16,7 @@
 		<?php echo $sf_content ?>
 	  </div>
 	  <div class="footer">
-		  <?php echo link_to('Home', '@homepage'); ?> | <?php echo link_to('About Beacon', '@about_beacon'); ?> | <?php echo link_to('What\'s a Conference?', '@about_conferences'); ?> | <?php echo link_to('Get in Touch', '@contact'); ?> | <?php echo link_to('Log In', '/backend.php'); ?>
+		  <?php echo link_to('Home', '@homepage'); ?> | <?php echo link_to('About Beacon', '@about_beacon'); ?> | <?php echo link_to('What\'s a Conference?', '@about_conferences'); ?> | <?php echo link_to('Get in Touch', '@contact'); ?> | <?php echo link_to('Edit', '/backend.php'); ?>
 	  </div>
   </body>
 </html>
