@@ -14,6 +14,10 @@ about_beacon:
   url: /about/beacon
   param: { module: about, action: beacon }
 
+contact:
+  url: /contact
+  param: { module: about, action: contact }
+
 # generic rules
 # please, remove them by adding more specific rules
 default_index:
