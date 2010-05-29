@@ -16,7 +16,7 @@
 		<?php echo $sf_content ?>
 	  </div>
 	  <div class="footer">
-		  <?php echo link_to('Conferences', 'conference/index'); ?> | <?php echo link_to('Log Out', '@sf_guard_signout'); ?>
+		  <?php echo link_to('Conferences', 'conference/index'); ?> | <?php echo link_to('Log Out', '@sf_guard_signout'); ?> | <?php echo link_to('View Public Site', '/'); ?>
 	  </div>
   </body>
 </html>

@@ -6,11 +6,11 @@ default:
     content-type: text/html
 
   metas:
-    #title:        symfony project
-    #description:  symfony project
-    #keywords:     symfony, project
-    #language:     en
-    #robots:       index, follow
+    title:        Beacon Youth Conferences
+    description:  Find all the conference forms for Beacon Youth evens in Florida.
+    keywords:     beacon youth, conference forms, beacon youth florida
+    language:     en
+    robots:       index, follow
 
   stylesheets:    [main.css]
 
