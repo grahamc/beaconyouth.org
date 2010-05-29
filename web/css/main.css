@@ -1,0 +1,42 @@
+.calendar {
+	background-image: url(/images/calendar_blue.png);
+	height: 83px;
+	width: 83px;
+	font-family: Helvetica;
+	font-weight: bold;
+	text-align: center;
+}
+
+.calendar .month {
+	padding-top: 9px;
+	font-size: 15px;
+	color: white;
+}
+
+.calendar .date {
+	margin-top: -17px;
+	padding-top: 0px;
+	font-size: 60px;
+}
+
+
+
+.conference_surround {
+	width: 600px;
+}
+
+.conference_date {
+	width: 100px;
+	float: left;
+}
+
+.conference_description {
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.conference_download {
+	width: 100px;
+	float: right;
+}
