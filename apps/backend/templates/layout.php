@@ -9,8 +9,14 @@
     <?php include_javascripts() ?>
   </head>
   <body>
+	  <div class="header">
+		  <h1>Beacon</h1>
+	  </div>
 	  <div class="container">
 		<?php echo $sf_content ?>
+	  </div>
+	  <div class="footer">
+		  <?php echo link_to('Conferences', 'conference/index'); ?> | <?php echo link_to('Log Out', '@sf_guard_signout'); ?>
 	  </div>
   </body>
 </html>

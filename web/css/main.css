@@ -16,20 +16,40 @@ select, option, input, textarea { font-size: inherit; font-family: inherit; }
 
 a, a:link, a:visited, a:active, a:focus { outline: none !important; }
 
-body { font-size: 62.5%; line-height: 1; } /* line-height is a temporary trial */
+body { font-size: 62.5%; line-height: 1.5; } /* line-height is a temporary trial */
 
+ol {
+	list-style: decimal;
+}
+
+ul {
+	list-style: circle;
+}
+
+ul, ol {
+	margin-left: 35px;
+}
 
 h1 {
 	font-size: 60px;
 	font-weight: 550;
 }
 
-.header {
-	width: 600px;
+.header, .footer {
+	width: 610px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: -30px;
 	margin-top: 15px;
+}
+
+.footer {
+	font-size: 14px;
+	text-align: right;
+}
+
+* {
+	font-family: Helvetica;
 }
 
 body {
@@ -46,11 +66,22 @@ img {
 h2 {
 	font-size: 35px;
 	font-weight: bolder;
+	margin-left: 5px;
 }
 
 p {
-	font-family: serif;
+	margin-left: 5px;
+	text-indent: 10px;
+	margin-bottom: 10px;
+}
+
+p, ol, ul, label, input, th, td {
 	font-size: 16px;
+	margin-bottom: 5px;
+}
+
+td {
+	margin-right: 5px;
 }
 
 .calendar p {
@@ -58,11 +89,12 @@ p {
 }
 
 .container {
-	width: 600px;
+	width: 610px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 30px;
-	background-color: #fbf8f8;
+	padding-bottom: 5px;
+	background-color: #ffffee;
 	
 }
 
@@ -78,22 +110,24 @@ p {
 }
 
 .calendar .month {
-	padding-top: 9px;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
 	font-size: 15px;
 	color: white;
 }
 
 .calendar .date {
-	padding-top: 6px;
+	margin: -9px 0px 0px -11px;
+	padding: 0px 0px 0px 0px;
 	font-size: 60px;
 }
 
 
 
 .conference_surround {
-	width: 600px;
+	width: 610px;
 	height: 110px;
-	padding: 5px 5px; 5px 5px;
+	margin-top: 5px;
 	border-bottom: thin black solid;
 }
 
@@ -112,7 +146,7 @@ p {
 }
 
 .conference_description h1, .conference_description p {
-	width: 400px;
+	width: 375px;
 }
 
 .conference_download {

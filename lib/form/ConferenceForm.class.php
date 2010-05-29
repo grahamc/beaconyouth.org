@@ -16,15 +16,29 @@ class ConferenceForm extends BaseConferenceForm
 	  $this->setDefault('type', 'all-age');
 	  $this->setDefault('start_date', time());
 
-	  $this->setWidget('form_filename', new sfWidgetFormInputFile());
+	  if ($this->getObject()->getFormFilename() !== '') {
+		  $options = array('file_src' => sfConfig::get('sf_upload_path') . $this->getObject()->getFormFilename(),
+							'is_image' => false,
+							'with_delete' => false);
+		  $this->setWidget('form_filename', new sfWidgetFormInputFileEditable($options));
+	  } else {
+		  $this->setWidget('form_filename', new sfWidgetFormInputFile());
+	  }
+	  
 
 	  $this->getWidget('form_filename')->setLabel('file');
 
-	  $this->validatorSchema['form_filename'] = new sfValidatorFile(array(
-		  'required'   => true,
-		  'path'       => sfConfig::get('sf_upload_dir').'/forms',
-		  'mime_types' => array('application/pdf'),
-));
+	  $options = array();
+	  $options['path'] = sfConfig::get('sf_upload_dir').'/forms';
+	  $options['mime_types'] = array('application/pdf');
+
+	  if ($this->getObject()->getFormFilename() !== '') {
+		  $options['required'] = false;
+	  } else {
+		  $options['required'] = true;
+	  }
+
+	  $this->validatorSchema['form_filename'] = new sfValidatorFile($options);
 
 	  unset($this['created_at']);
 	  unset($this['updated_at']);
