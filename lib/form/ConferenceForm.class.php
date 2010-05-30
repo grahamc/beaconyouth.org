@@ -19,7 +19,7 @@ class ConferenceForm extends BaseConferenceForm
 	  $this->setDefault('type', 'all-age');
 	  $this->setDefault('start_date', time());
 
-	  if ($this->getObject()->getFormFilename() !== '') {
+	  if ($this->getObject()->getFormFilename() != '') {
 		  $options = array('file_src' => sfConfig::get('sf_upload_path') . $this->getObject()->getFormFilename(),
 							'is_image' => false,
 							'with_delete' => false,

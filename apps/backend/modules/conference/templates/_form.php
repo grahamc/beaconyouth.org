@@ -24,7 +24,7 @@
 		<?php echo $form['form_filename']->renderError() ?>
 						<?php echo $form['form_filename'] ?>
 		<p style="margin-left: 0px; text-indent: 0px; text-align: left;"><small>(This has to be a PDF.)</small></p>
-		<?php if ($form->getObject()->getFormFilename() !== '') { ?><p style="text-indent: 0px;">Note: You don't have to upload another form, there is <a target="_blank" href="/uploads/forms/<?php echo $form->getObject()->getFormFilename(); ?>">already one.</a></p><?php } ?>
+		<?php if ($form->getObject()->getFormFilename() != '') { ?><p style="text-indent: 0px;">Note: You don't have to upload another form, there is <a target="_blank" href="/uploads/forms/<?php echo $form->getObject()->getFormFilename(); ?>">already one.</a></p><?php } ?>
 
 		<p style="text-indent: 0px; margin-left: auto; margin-right: auto;">
 			<img src="/images/icons/adobe_pdf.png" alt="Adobe PDFs" />
