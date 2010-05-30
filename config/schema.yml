@@ -5,7 +5,7 @@ propel:
     name: {type: VARCHAR, size: '255', required: true }
     type: {type: VARCHAR, size: '255', required: true }
     location: {type: VARCHAR, size: '255', required: true }
-    start_date: { type: DATE, required: false }
+    start_date: { type: DATE, required: true }
     form_filename: {type: VARCHAR, size: '255', required: true }
     _propel_behaviors:
       timestampable: ~

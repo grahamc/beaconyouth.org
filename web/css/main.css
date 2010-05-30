@@ -35,6 +35,33 @@ td {
 	padding-right: 30px;
 }
 
+p.madlibs_form {
+	font-size: 30px;
+	font-weight: bolder;
+}
+
+.madlibs {
+	border: none;
+	border-bottom: dotted gray 2px;
+	font-size: 19px;
+	font-weight: bolder;
+}
+
+.madlibs_error {
+	border: none;
+	border-bottom: dotted red 2px;
+	background-color: #ffdddd;
+}
+
+.madlibs_clicked {
+
+}
+
+.madlibs_unclicked {
+	color: gray;
+	font-family: cursive;
+}
+
 h1 {
 	font-size: 60px;
 	font-weight: 550;
