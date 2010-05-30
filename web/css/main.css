@@ -36,11 +36,16 @@ td {
 }
 
 p.madlibs_form {
-	font-size: 30px;
+	font-size: 20px;
 	font-weight: bolder;
 }
 
-.madlibs {
+select.madlibs_error, option.madlibs_error {
+	font-size: 14px;
+	font-family: helvetica;
+	font-weight: bold;
+}
+.madlibs input {
 	border: none;
 	border-bottom: dotted gray 2px;
 	font-size: 19px;
@@ -54,12 +59,30 @@ p.madlibs_form {
 }
 
 .madlibs_clicked {
-
+	font-family: helvetica;
 }
 
 .madlibs_unclicked {
 	color: gray;
 	font-family: cursive;
+}
+
+.new_con {
+	clear: both;
+}
+
+.clear_all {
+	clear: both;
+}
+
+.con_form_upload {
+	width: 45%;
+	float: right;
+}
+
+.con_form_about {
+	width: 45%;
+	float: left;
 }
 
 h1 {

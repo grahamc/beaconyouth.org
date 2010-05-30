@@ -30,7 +30,7 @@ abstract class BaseConferenceForm extends BaseFormPropel
       'name'          => new sfValidatorString(array('max_length' => 255)),
       'type'          => new sfValidatorString(array('max_length' => 255)),
       'location'      => new sfValidatorString(array('max_length' => 255)),
-      'start_date'    => new sfValidatorDate(array('required' => false)),
+      'start_date'    => new sfValidatorDate(),
       'form_filename' => new sfValidatorString(array('max_length' => 255)),
       'created_at'    => new sfValidatorDateTime(array('required' => false)),
       'updated_at'    => new sfValidatorDateTime(array('required' => false)),

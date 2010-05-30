@@ -3,7 +3,7 @@ sfGuardUser:
     username: admin
     algorithm: sha1
     salt: c5ec3cf6ad232a7611d0cf4f0e94fd58
-    password: 7e0222eeda0615f3d7695bc3ad0f99418f8eb625
+    password: admin
     created_at: '2010-05-28 18:12:53'
     last_login: '2010-05-28 18:13:21'
     is_active: '1'

@@ -15,7 +15,7 @@ abstract class BaseConferenceFormFilter extends BaseFormFilterPropel
       'name'          => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'type'          => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'location'      => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'start_date'    => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate())),
+      'start_date'    => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
       'form_filename' => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'created_at'    => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate())),
       'updated_at'    => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate())),

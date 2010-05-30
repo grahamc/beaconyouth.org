@@ -11,6 +11,9 @@ class ConferenceForm extends BaseConferenceForm
 {
   public function configure()
   {
+	  
+	  $this->getValidator('start_date')->setMessage('required', 'You forgot to fill in the starting date.');
+
 	  $this->setHint('name', 'conference name');
 	  $this->setHint('location', 'church name');
 	  $this->setDefault('type', 'all-age');
@@ -19,7 +22,9 @@ class ConferenceForm extends BaseConferenceForm
 	  if ($this->getObject()->getFormFilename() !== '') {
 		  $options = array('file_src' => sfConfig::get('sf_upload_path') . $this->getObject()->getFormFilename(),
 							'is_image' => false,
-							'with_delete' => false);
+							'with_delete' => false,
+							'template' => '%input%<br />%delete% %delete_label%'
+						  );
 		  $this->setWidget('form_filename', new sfWidgetFormInputFileEditable($options));
 	  } else {
 		  $this->setWidget('form_filename', new sfWidgetFormInputFile());
