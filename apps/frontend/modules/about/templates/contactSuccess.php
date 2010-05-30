@@ -1,4 +1,4 @@
-<h2>Let's chat.</h2>
+<h2>Let&rsquo;s chat.</h2>
 <p>Need to talk to us? Feel free; we would love to hear from you.</p>
 
 <p><strong>Adult Co-Chair:</strong> Cleve Williams (clevewilliams &#8211; at &#8211; earthlink &#8211; dot &#8211; net)</p>
