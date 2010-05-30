@@ -5,7 +5,7 @@
 		<?php echo calendar($conference->getStartDate('F'), $conference->getStartDate('j')); ?>
 	</div>
 	<div class="conference_description">
-		<h2><?php echo $conference->getName(); ?></h2>
+		<h3><?php echo $conference->getName(); ?></h3>
 		<p>A <?php echo $conference->getType(); ?> conference hosted at <?php echo $conference->getLocation(); ?>.</p>
 	</div>
 	<div class="conference_download">

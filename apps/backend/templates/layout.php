@@ -14,9 +14,10 @@
 	  </div>
 	  <div class="container">
 		<?php echo $sf_content ?>
+		  <div class="clear_all"></div>
 	  </div>
 	  <div class="footer">
-		  <?php echo link_to('Conferences', 'conference/index'); ?> | <?php echo link_to('Log Out', '@sf_guard_signout'); ?> | <?php echo link_to('View Public Site', '/'); ?>
+		  <span><?php echo link_to('Conferences', 'conference/index'); ?> | <?php echo link_to('Log Out', '@sf_guard_signout'); ?> | <?php echo link_to('View Public Site', '/'); ?></span>
 	  </div>
   </body>
 </html>
