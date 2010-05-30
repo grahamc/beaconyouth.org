@@ -1,13 +1,20 @@
 <?php
-function render_madlibs_formfield(sfFormField $field) {
+function render_madlibs_formfield(sfFormField $field, $new = true) {
 	$error = array('class' => 'madlibs_error madlibs_unclicked', 'value' => $field->getError());
-	$standard = array('class' => 'madlibs madlibs_unclicked');
+	$standard = array();
+
+	if ($new) {
+		$js = 'this.value="";this.setAttribute("class", "madlibs_clicked");';
+		$standard['class'] = 'madlibs madlibs_unclicked';
+	} else {
+		$js ='';
+	}
 
 	// Javascript replacement magic
-	$error['onfocus'] = 'javascript:if (this.value=="' . $field->getError() . '") {this.value="";this.setAttribute("class", "madlibs_clicked");}';
-	$standard['onselect'] = 'javascript:if (this.value=="' . $field->getValue() . '") {this.value="";this.setAttribute("class", "madlibs_clicked");}';
-	$error['onfocus'] = 'javascript:if (this.value=="' . $field->getError() . '") {this.value="";this.setAttribute("class", "madlibs_clicked");}';
-	$standard['onclick'] = 'javascript:if (this.value=="' . $field->getValue() . '") {this.value="";this.setAttribute("class", "madlibs_clicked");}';
+	$error['onfocus'] = '';
+	$standard['onselect'] = 'javascript:if (this.value=="' . $field->getValue() . '") {' .$js. '}';
+	$error['onfocus'] = 'javascript:if (this.value=="' . $field->getError() . '") {' .$js. '}';
+	$standard['onclick'] = 'javascript:if (this.value=="' . $field->getValue() . '") {' .$js. '}';
 
 	if ($field->hasError()) {
 		$options = array_merge($standard, $error);
