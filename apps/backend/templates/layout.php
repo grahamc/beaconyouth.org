@@ -17,7 +17,7 @@
 		  <div class="clear_all"></div>
 	  </div>
 	  <div class="footer">
-		  <span><?php echo link_to('Conferences', 'conference/index'); ?> | <?php echo link_to('Log Out', '@sf_guard_signout'); ?> | <?php echo link_to('View Public Site', '/'); ?></span>
+		  <span><?php echo link_to('Conferences', 'conference/index'); ?> | <?php echo link_to('Log Out', '@sf_guard_signout'); ?> | <?php echo link_to('View Public Site', sfConfig::get('app_frontend_url')); ?></span>
 	  </div>
   </body>
 </html>

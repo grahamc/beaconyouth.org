@@ -1,0 +1,6 @@
+dev:
+  frontend_url: /frontend_dev.php/
+  backend_url: /backend_dev.php/
+prod:
+  frontend_url: /
+  backend_url: /backend.php/
