@@ -9,7 +9,7 @@
 		<p>A <?php echo $conference->getType(); ?> conference hosted at <?php echo $conference->getLocation(); ?>.</p>
 	</div>
 	<div class="conference_download">
-		<a href="/uploads/forms/<?php echo $conference->getFormFilename(); ?>" target="_blank"><img src="/images/icons/Download.png" alt="Download" /></a>
+		<a href="/uploads/forms/<?php echo $conference->getFormFilename(); ?>" target="_blank"><img src="/images/icons/Arrow Down.png" alt="Download" /></a>
 		<br />
 		<span class="smalltext" style="margin-left: 20px"><a href="/uploads/forms/<?php echo $conference->getFormFilename(); ?>" target="_blank">download</a></span>
 	</div>

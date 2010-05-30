@@ -34,6 +34,7 @@ class conferenceActions extends sfActions
 
   public function executeEdit(sfWebRequest $request)
   {
+	  $this->setTemplate('new');
     $this->forward404Unless($conference = ConferencePeer::retrieveByPk($request->getParameter('id')), sprintf('Object conference does not exist (%s).', $request->getParameter('id')));
     $this->form = new conferenceForm($conference);
   }
@@ -66,7 +67,7 @@ class conferenceActions extends sfActions
     {
       $conference = $form->save();
 
-      $this->redirect('conference/edit?id='.$conference->getId());
+      $this->redirect('conference/index');
     }
   }
 }

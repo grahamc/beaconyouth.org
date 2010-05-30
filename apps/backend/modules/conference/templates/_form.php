@@ -10,8 +10,8 @@
 <div>
 	<div class="con_form_about">
 		<?php echo $form->renderHiddenFields(false) ?>
-		<p class="madlibs_form">We're planning a <?php render_madlibs_formfield($form['type']) ?> con named
-		<?php render_madlibs_formfield($form['name']); ?>. It'll be hosted by
+		<p class="madlibs_form">We&rsquo;re planning a <?php render_madlibs_formfield($form['type']) ?> con named
+		<?php render_madlibs_formfield($form['name']); ?>. It&rsquo;ll be hosted by
 		<?php render_madlibs_formfield($form['location']); ?> <br />at
 		<?php render_madlibs_formfield($form['start_date']); ?>.</p>
 
@@ -21,13 +21,18 @@
 
 	<div class="con_form_upload">
 		<p style="margin-left: -10px" class="madlibs_form">Conference Form</p>
-		<?php echo $form['form_filename']->renderError() ?>
+		<?php if ($form['form_filename']->hasError()) { ?>
+		<p class="madlibs_error"><?php echo $form['form_filename']->getError() ?></p>
+		<?php } ?>
 						<?php echo $form['form_filename'] ?>
 		<p style="margin-left: 0px; text-indent: 0px; text-align: left;"><small>(This has to be a PDF.)</small></p>
-		<?php if ($form->getObject()->getFormFilename() != '') { ?><p style="text-indent: 0px;">Note: You don't have to upload another form, there is <a target="_blank" href="/uploads/forms/<?php echo $form->getObject()->getFormFilename(); ?>">already one.</a></p><?php } ?>
+		<?php if ($form->getObject()->getFormFilename() != '') { ?><p style="text-indent: 0px;">Note: You don't have to upload another form, there <a target="_blank" href="/uploads/forms/<?php echo $form->getObject()->getFormFilename(); ?>">already is one.</a></p><?php } ?>
 
-		<p style="text-indent: 0px; margin-left: auto; margin-right: auto;">
-			<img src="/images/icons/adobe_pdf.png" alt="Adobe PDFs" />
+		
+		<p style="margin-top: 15px; text-indent: 0px; margin-left: auto; margin-right: auto;">
+			<strong>Can&rsquo;t make a PDF?</strong><br />
+			<!--<img src="/images/icons/adobe_pdf.png" alt="Adobe PDFs" />-->
+			Try converting your word document or whatever you have at an <a href="http://www.freepdfconvert.com/">online PDF conversion</a> website.
 		</p>
 	</div>
 </div>

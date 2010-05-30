@@ -4,8 +4,9 @@ function render_madlibs_formfield(sfFormField $field) {
 	$standard = array('class' => 'madlibs madlibs_unclicked');
 
 	// Javascript replacement magic
-	$error['onclick'] = 'javascript:if (this.value=="' . $field->getError() . '") {this.value="";}';
-
+	$error['onfocus'] = 'javascript:if (this.value=="' . $field->getError() . '") {this.value="";this.setAttribute("class", "madlibs_clicked");}';
+	$standard['onselect'] = 'javascript:if (this.value=="' . $field->getValue() . '") {this.value="";this.setAttribute("class", "madlibs_clicked");}';
+	$error['onfocus'] = 'javascript:if (this.value=="' . $field->getError() . '") {this.value="";this.setAttribute("class", "madlibs_clicked");}';
 	$standard['onclick'] = 'javascript:if (this.value=="' . $field->getValue() . '") {this.value="";this.setAttribute("class", "madlibs_clicked");}';
 
 	if ($field->hasError()) {

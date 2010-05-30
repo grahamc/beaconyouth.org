@@ -18,6 +18,9 @@ class ConferenceForm extends BaseConferenceForm
 	  $this->setHint('location', 'church name');
 	  $this->setDefault('type', 'all-age');
 	  $this->setDefault('start_date', time());
+	  
+	  $years = range(date('Y'), date('Y') + 2);
+	  $this->getWidget('start_date')->setOption('years', array_combine($years, $years));
 
 	  if ($this->getObject()->getFormFilename() != '') {
 		  $options = array('file_src' => sfConfig::get('sf_upload_path') . $this->getObject()->getFormFilename(),
@@ -37,13 +40,13 @@ class ConferenceForm extends BaseConferenceForm
 	  $options['path'] = sfConfig::get('sf_upload_dir').'/forms';
 	  $options['mime_types'] = array('application/pdf');
 
-	  if ($this->getObject()->getFormFilename() !== '') {
+	  if ($this->getObject()->getFormFilename() != '') {
 		  $options['required'] = false;
 	  } else {
 		  $options['required'] = true;
 	  }
 
-	  $this->validatorSchema['form_filename'] = new sfValidatorFile($options);
+	  $this->validatorSchema['form_filename'] = new sfValidatorFile($options, array('mime_types' => 'You can only upload a PDF.'));
 
 	  unset($this['created_at']);
 	  unset($this['updated_at']);
