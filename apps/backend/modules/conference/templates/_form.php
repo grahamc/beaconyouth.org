@@ -16,7 +16,7 @@ $new = $form->getObject()->isNew();
 ?>
 		<p class="madlibs_form">We&rsquo;re planning a <?php render_madlibs_formfield($form['type'], $new) ?> con named
 		<?php render_madlibs_formfield($form['name'], $new); ?>. It&rsquo;ll be hosted by
-		<?php render_madlibs_formfield($form['location'], $new); ?> <br />at
+		<?php render_madlibs_formfield($form['location'], $new); ?> <br />on
 		<?php render_madlibs_formfield($form['start_date'], $new); ?>.</p>
 
 		<?php if ($form['start_date']->hasError()) { echo '<p style="margin-right: 0px; text-align: center;"><small>Oops! ' . $form['start_date']->getError() . '</small></p>'; }?>
