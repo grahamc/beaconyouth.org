@@ -27,6 +27,6 @@ class aboutActions extends sfActions
 
   public function executeContact(sfWebRequest $request)
   {
-
+      $this->people = PersonPeer::retrieveAll();
   }
 }
